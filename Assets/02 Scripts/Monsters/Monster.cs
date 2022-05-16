@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class Monster : MonoBehaviour, IDamageable 
 {
-    private int speed;
-    private int damage;
+    public string name;
     public int hp;
-
-    public Jobs character;
+    public int speed;
+    public int damage;
 
 
 

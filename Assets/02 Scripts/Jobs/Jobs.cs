@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Jobs : MonoBehaviour
+[System.Serializable]
+public abstract class Jobs : Oder
 {
-    private int speed;
-    private int damage;
     public int hp;
+    public int damage;
+    
+    
 
     public Monster monster;
 
@@ -44,13 +46,12 @@ public abstract class Jobs : MonoBehaviour
                 IDamageable monster = hit.transform.GetComponent<IDamageable>();
                 monster?.TakeDamage(damage);
             }
-        }
-
-        
+        } 
 
 
     }
 
+    //public abstract void Shot();
     
 
 
