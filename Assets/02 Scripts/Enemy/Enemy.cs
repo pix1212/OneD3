@@ -7,17 +7,35 @@ public class Enemy : Oder
     public int hp;
     protected int damage;
 
-    
+    bool isEnemyDead = false;
 
-    // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        Attack();
     }
+
+
+    public void TakeDamage(int damage)
+    {
+        hp -= damage;
+
+        if(hp <= 0)
+        {
+            GameObject.Destroy(gameObject);
+        }
+    }
+
+    void Attack()
+    {
+        damage = Random.Range(5,9);
+
+        //character?.TakeDamage(damage);
+    }
+
+    
 }

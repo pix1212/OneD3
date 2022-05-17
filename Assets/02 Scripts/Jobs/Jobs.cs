@@ -5,10 +5,14 @@ using UnityEngine;
 [System.Serializable]
 public abstract class Jobs : Oder
 {
+    public Transform spwanPoints;
     public int hp;
     public int damage;
     
-    
+    void Awake()
+    {
+        
+    }
 
     public Monster monster;
 
@@ -20,6 +24,7 @@ public abstract class Jobs : Oder
     void Update()
     {
         Attack();
+        
 
     }
 

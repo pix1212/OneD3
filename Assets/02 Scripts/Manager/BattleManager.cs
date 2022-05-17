@@ -27,7 +27,10 @@ public class BattleManager : MonoBehaviour
 
     public void StartBattle()
     {
+
         //TODO: oderCharaters에다가 캐릭터&몬스터들 넣어주기.
+        
+        
         for(int i = 0; i < 4; i++)
         {
             oderCharaters.Add(PartySystem.instance.heros[i]);
@@ -42,8 +45,12 @@ public class BattleManager : MonoBehaviour
         oderCharaters = oderCharaters.OrderBy(x => x.speed).ToList();
         foreach (Oder t in oderCharaters)
             Debug.Log(t.name + ": "+ t.speed);
-        //testData = testData.OrderBy(x => x.data).ToList();
-         //foreach (TestData t in testData)
+        
+        /*
+        testData = testData.OrderBy(x => x.data).ToList();
+        foreach (TestData t in testData)
+         */
+        
     }
 
 
@@ -57,5 +64,6 @@ public class BattleManager : MonoBehaviour
     }
 
 
+    
     
 }
