@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
-{
+{ 
     // Start is called before the first frame update
     void Start()
     {
         PositionSystem.instance.HeroSpwan();
-        PositionSystem.instance.EnemySpwan();
+        PositionSystem.instance.EnemyRandomSpwan();
         BattleManager.instance.StartBattle();
     }
 

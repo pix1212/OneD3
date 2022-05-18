@@ -36,12 +36,13 @@ public class BattleManager : MonoBehaviour
             oderCharaters.Add(PartySystem.instance.heros[i]);
         }
 
-        for(int i = 0; i < 3; i++)
-        {
-            enemy[i].speed = Random.Range(5,9);
-            oderCharaters.Add(enemy[i]);
-        }
 
+        //for(int i = 0; i < 3; i++)
+        //{
+        //    enemy[i].speed = Random.Range(5,9);
+        //    oderCharaters.Add(enemy[i]);
+        //}
+//
         oderCharaters = oderCharaters.OrderBy(x => x.speed).ToList();
         foreach (Oder t in oderCharaters)
             Debug.Log(t.name + ": "+ t.speed);
