@@ -7,9 +7,9 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        PositionSystem.instance.HeroSpwan();
+        //PositionSystem.instance.HeroSpwan();
         PositionSystem.instance.EnemyRandomSpwan();
-        BattleManager.instance.StartBattle();
+       // BattleManager.instance.StartBattle();
     }
 
     // Update is called once per frame

@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
+public enum BattleState { START, PLAYERTURN, ENEMYTURN, WON, LOST }
+
 public class BattleManager : MonoBehaviour
 {
+    #region 싱글톤 
     static BattleManager _instance;
 
     public static BattleManager instance{ get { return _instance;}}
@@ -14,6 +17,48 @@ public class BattleManager : MonoBehaviour
         if(_instance == null)
             _instance = this;
     }
+
+    #endregion
+
+    public GameObject playerPrefab;
+	public GameObject enemyPrefab;
+
+    public Transform playerBattleStation;
+	public Transform enemyBattleStation;
+
+    Unit playerUnit;
+	Unit enemyUnit;
+
+    public BattleState state;
+
+    void StartBattle()
+    {
+		state = BattleState.START;
+		//StartCoroutine(SetupBattle());
+    }
+
+    void SetupBattle()
+    {
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     public Enemy[] enemy;
 
@@ -25,7 +70,8 @@ public class BattleManager : MonoBehaviour
         oderCharaters = new List<Oder>();
     }
 
-    public void StartBattle()
+    
+    public void StartBattle2()
     {
 
         //TODO: oderCharaters에다가 캐릭터&몬스터들 넣어주기.
@@ -33,7 +79,7 @@ public class BattleManager : MonoBehaviour
         
         for(int i = 0; i < 4; i++)
         {
-            oderCharaters.Add(PartySystem.instance.heros[i]);
+            //oderCharaters.Add(PartySystem.instance.heros[i]);
         }
 
 
@@ -55,14 +101,8 @@ public class BattleManager : MonoBehaviour
     }
 
 
-    public void AddOder(Jobs unit)
-    {
-        oderCharaters.Add(unit);
-        int a = unit.speed;
-        //unit.Shot();
-        
 
-    }
+   
 
 
     

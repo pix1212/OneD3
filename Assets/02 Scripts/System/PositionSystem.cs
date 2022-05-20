@@ -26,19 +26,19 @@ public class PositionSystem : MonoBehaviour
 
 
 
-    public void HeroSpwan()
-    {
-        for(int i = 0; i < PartySystem.instance.heros.Length; i++)
-        {
-            for(int j = 0; j < heroPosition.Length; j++ )
-            {
-                if(j == i)
-                Instantiate(PartySystem.instance.heros[i], heroPosition[j]).transform.parent = heroList.transform;        
-            }
-            
-        }
+   //public void HeroSpwan()
+   //{
+   //    for(int i = 0; i < PartySystem.instance.heros.Length; i++)
+   //    {
+   //        for(int j = 0; j < heroPosition.Length; j++ )
+   //        {
+   //            if(j == i)
+   //            Instantiate(PartySystem.instance.heros[i], heroPosition[j]).transform.parent = heroList.transform;        
+   //        }
+   //        
+   //    }
 
-    }
+   //}
 
     public void EnemyRandomSpwan()
     {
