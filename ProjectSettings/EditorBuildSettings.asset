@@ -6,10 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/01 Scenes/StartScenes.unity
+    path: Assets/04 Animations/StartScenes.unity
     guid: 0fc08ac3011a66e458285d4f90ef801a
   - enabled: 1
-    path: Assets/01 Scenes/MapScenes.unity
+    path: Assets/04 Animations/MapScenes.unity
     guid: 13a7529ea22f75a4797a962c3ef79d1c
   - enabled: 1
     path: Assets/01 Scenes/BattleScenes.unity
